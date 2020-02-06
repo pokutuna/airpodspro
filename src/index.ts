@@ -35,6 +35,8 @@ export const check = async (message: PubsubMessage) => {
   if (!validate(data)) return;
 
   const stock = await checkStock(data.item, data.store);
+  console.info(JSON.stringify(stock))
+
   if (typeof stock.product === 'undefined') {
     slack.notifyError(
       data.slack,

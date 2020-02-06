@@ -27,7 +27,7 @@ ITEM := MWP22J/A
 STORE := R711
 
 SLACK_WEBHOOK := https://hooks.slack.com/services/**************
-SLACK_CHANNEL := "#times_pokutuna"
+SLACK_CHANNEL := \#times_pokutuna
 
 .PHONY: publish-message-example
 publish-message-example:
