@@ -1,7 +1,10 @@
 {
+  "main": "build/src/index.js",
   "devDependencies": {
-    "@types/express": "^4.17.2",
+    "@google-cloud/pubsub": "^1.4.1",
+    "@susisu/type-of-schema": "^0.2.0",
     "@types/node": "^10.0.3",
+    "@types/node-fetch": "^2.5.4",
     "gts": "^1.1.2",
     "typescript": "~3.7.0"
   },
@@ -15,7 +18,8 @@
     "posttest": "yarn run check"
   },
   "dependencies": {
-    "@pokutuna/requestlog-cloudfunctions": "^0.0.2",
-    "express": "^4.17.1"
-  }
+    "ajv": "^6.11.0",
+    "node-fetch": "^2.6.0"
+  },
+  "license": "private"
 }
