@@ -23,7 +23,10 @@ create-topic:
 
 # AirPods Pro
 ITEM := MWP22J/A
-# Apple 京都
+
+# R711: Apple 京都
+# R224: Apple 表参道
+# R119: Apple 渋谷
 STORE := R711
 
 SLACK_WEBHOOK := https://hooks.slack.com/services/**************
@@ -36,7 +39,7 @@ publish-message-example:
 
 .PHONY: create-scheduler-example
 create-scheduler-example:
-	$(GCLOUD) scheduler jobs create pubsub kick-airpodspro-pokutuna \
+	$(GCLOUD) scheduler jobs create pubsub kick-airpodspro-$(STORE) \
 		--topic=$(TOPIC) \
 		--schedule="every 10 minutes" \
 		--message-body='{ "item": "$(ITEM)", "store": "$(STORE)", "notify_not_today": false, "slack": { "webhook": "$(SLACK_WEBHOOK)", "channel": "$(SLACK_CHANNEL)" } }'
