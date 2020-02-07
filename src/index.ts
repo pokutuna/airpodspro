@@ -1,7 +1,7 @@
 import { PubsubMessage } from '@google-cloud/pubsub/build/src/publisher';
+import { TypeOfSchema } from '@susisu/type-of-schema';
 
 import Ajv = require('ajv');
-import { TypeOfSchema } from '@susisu/type-of-schema';
 import { checkStock } from './stock';
 import * as slack from './slack';
 
